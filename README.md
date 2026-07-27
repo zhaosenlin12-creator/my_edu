@@ -29,7 +29,8 @@
 - 查内容：[[40_Content/index]]
 - 查 AI：[[50_AI/index]]
 - 查外部资料：[[70_Sources/index]]
-- 查使用说明：[[00_Home/使用说明]]
+- 快速入门：[[00_Home/快速使用指南]]
+- 完整使用：[[00_Home/使用说明]]
 - 命令行：`rg -n "关键词" C:\my_know`
 
 核心笔记统一使用 properties：`type`、`status`、`domain`、`audience`、`repo`、`url`、`summary`、`next_action`、`updated_at`。
