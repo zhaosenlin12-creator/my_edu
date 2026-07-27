@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "profile",
+      "type": "text",
+      "text": "# 能力地图\n\n## 教学\n- 乐高 / WeDo / JrCode / Python / C++ / AI\n\n## 项目\n- Web / 3D / 游戏 / 抖音内容 / AI 工具\n\n## 内容\n- 抖音（愈见森林）\n- 个人站 / 直播\n- 长文 / 文章\n\n## AI\n- Codex 默认\n- Skills / Prompts / 浏览器智能体",
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 280
+    },
+    {
+      "id": "loop",
+      "type": "text",
+      "text": "# 内容流水线\n\n教学 → 项目 → 直播 / 抖音 → AI 工具 → 沉淀回这里",
+      "x": 360,
+      "y": 0,
+      "width": 320,
+      "height": 160
+    }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "profile", "fromSide": "right", "toNode": "loop", "toSide": "left" }
+  ]
+}

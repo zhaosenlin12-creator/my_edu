@@ -1,0 +1,13 @@
+{
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "vimMode": false,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "showInlineTitle": true,
+  "readableLineLength": true,
+  "autoDetectMarkdownChanges": true,
+  "promptDelete": true,
+  "promptConvert": true
+}

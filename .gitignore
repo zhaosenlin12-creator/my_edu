@@ -1,0 +1,35 @@
+﻿# Obsidian
+.obsidian/workspace/
+.obsidian/cache/
+.obsidian/themes/
+.obsidian/plugins/
+.obsidian/log/
+.obsidian/backups/
+.trash/
+
+# Editor / system
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.swp
+*.tmp
+*.bak
+
+# OS AI noise
+.cache/
+node_modules/
+.vscode/
+
+# Sandbox
+.sandbox/
+.attachments/
+.github/
+
+# Large media blacklist (keep small icons)
+*.mp4
+*.mov
+*.psd
+*.zip
+*.rar
+*.7z
