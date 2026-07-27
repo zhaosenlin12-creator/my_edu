@@ -5,6 +5,7 @@
 - 抓取日期：2026-07-27
 - 成功抓取：484 项（中文 242 + 英文 242）
 - 失败：0
+- 引擎：Scrapling（默认；本地无需 API key）
 
 ## 在 Obsidian 里检索
 
@@ -18,8 +19,21 @@
 
 ## 抓取与同步
 
-- 抓取脚本：`C:\Users\Administrator\.codex\skills\website-knowledge-crawler\scripts\crawl_site.py`
+- 抓取 skill：`website-knowledge-crawler`（位于 `~/.codex/skills/`）
 - 默认引擎：Scrapling（本地、无需 API key）
-- 备选引擎：Firecrawl（需要 `FIRECRAWL_API_KEY` 环境变量）
-- 全量更新：`python crawl_site.py https://vibe-hub.org C:\my_know\70_Sources\vibe-hub --workers 4 --delay 0.15`
-- `pages/` 已纳入 git，可在云端仓库看到完整捕获内容
+- 备选引擎：Firecrawl（需要 `FIRECRAWL_API_KEY` 与 `FIRECRAWL_API_URL` 环境变量）
+- 全量更新（本地重抓）：
+
+  ```powershell
+  python C:\Users\Administrator\.codex\skills\website-knowledge-crawler\scripts\crawl_site.py `
+      https://vibe-hub.org C:\my_know\70_Sources\vibe-hub `
+      --workers 4 --delay 0.15 --engine scrapling
+  ```
+
+- 难爬站点可用 auto 引擎自动回退：
+
+  ```powershell
+  python ... --engine auto
+  ```
+
+- `pages/` 已纳入 git，可在 GitHub 仓库看到完整捕获内容。
