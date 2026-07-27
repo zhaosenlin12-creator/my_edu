@@ -101,3 +101,24 @@ user / character / pet / pet_eggs / decoration / food / inventory / map_object /
 - [ ] 把宠物聊天本地预制对话做成独立模块（README 已说 v2.4.7 在用）
 - [ ] 把 deploy/ 旧脚本删掉，只留 DEPLOY_SERVER_EXACT.md
 - [ ] 把 PVP / 开放世界监控接入 PM2 + 飞书 / 钉钉告警
+
+## 事实 / 推断 / 待确认
+
+### 事实(可验证)
+- package.json v2.3.0, README v2.4.7(不一致)
+- Next.js 16.2.6 + Phaser 3.90 + Pyodide 0.29
+- 后端 32 个路由(pets.py 26976 字节最大)
+- 29 个 SQLAlchemy 模型
+- 部署在 game.codebn.cn 120.26.114.244
+- PM2 id=3(前端 3003) / id=4(后端 8000)
+- DEEPSEEK_API_KEY 在 backend/.env
+
+### 推断(基于事实,但要警惕)
+- v2.4.7 是用户面向的发布号,v2.3.0 是 package.json
+- v2.4.8 引入金币奖励系统(MAINTENANCE 提到)
+- 学员群体是宜昌猇亭小学生
+
+### 待确认(下次更新时核实)
+- v2.5 是否要做本地 LLM 替 DeepSeek
+- PVP 简单模式 AI 难度数据
+- 学员真实日活数据

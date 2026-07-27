@@ -79,3 +79,24 @@ achievements.json / assets.json / assets.imported.json / assets.pdf.json / cours
 - [ ] 把 staff.mode 切到 'real-profiles' 并写真实教师资料
 - [ ] 把 smoke-browser 失败的处理写成 self-healing（自动跳过重试）
 - [ ] 给 README 写一个“数据从哪里来、谁可以改”的小节
+
+## 事实 / 推断 / 待确认
+
+### 事实(可验证)
+- package.json 内部名 leqixiang-display-system v0.1.0
+- Vite 7.2.7 + React 19.2.1 + TS 5.9.3
+- ContentBundle 12 个 JSON 拼出 /content/*
+- StudentsConfig.policy = 'manual-review'
+- StaffConfig.mode = 'capability-template'
+- src/main.tsx 调用 warmStudentGallery(2000, 12)
+- src/lib/perf.ts LCP/CLS/INP 50 条 ring buffer
+
+### 推断(基于事实,但要警惕)
+- 是乐启享机构展览用大屏
+- AGENTS.md / CLAUDE.md 是 LLM 协作项目
+- README 没写是因为交给 LLM 接手
+
+### 待确认(下次更新时核实)
+- 学生档案原始目录结构
+- smoke-browser 的具体失败率
+- 乐启享机构全名确认(乐博士/智创未来/乐启享?)

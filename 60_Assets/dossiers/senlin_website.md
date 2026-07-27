@@ -85,3 +85,23 @@ tags: project,dossier,express,mysql,supabase,ai-proxy
 - [ ] 把文件型 token 改成 DB 或 Redis
 - [ ] 给 server.js 加 helmet / hpp / compression
 - [ ] 给 bookings / competitions 单独拆数据库表
+
+## 事实 / 推断 / 待确认
+
+### 事实(可验证)
+- package.json v1.0.0, 内部名 robotdoctor-tech-website
+- Express + MySQL2 + Supabase
+- server.js 32KB, ai-proxy.js 3.5KB
+- API key 用 base64 编码(sk-66b7...严重漏洞)
+- 端口 3000 主站 + 3001 AI 代理
+- PM2 部署在 /var/www/codebn
+
+### 推断(基于事实,但要警惕)
+- 关键词(科技比赛/特长生/NOIP/机器人竞赛/宜昌/猇亭区)显示是机构站
+- ai-proxy.js 是拆出来的独立 AI 服务
+- 业务域名 codebn.cn / codebona.cn 跑 PM2
+
+### 待确认(下次更新时核实)
+- 是否要迁到 env 替换 base64 API key
+- admin-tokens.json 是否要改 DB
+- 学员数据是否合规

@@ -1,69 +1,69 @@
 ---
 type: project
 status: active
-domain: web,business,brand
-audience: parent,teacher,student
-repo: zhaosenlin12-creator/senlin_website
-local_path: C:\kaifa\my_website
+domain: web,business
+audience: parent,student
 url: https://senlin-c1n.pages.dev
-business_url: https://codebn.cn / https://codebona.cn
+business_url: https://codebn.cn
 dossier: "[[60_Assets/dossiers/senlin_website]]"
 updated_at: 2026-07-27
-tags: express,mysql,supabase,ai-proxy,brand
+tags: website,business,school
 ---
 
-# senlin_website · 智创未来编程学院
+# 智创未来编程学院机构站
 
-> **证据第一**：详情看 [[60_Assets/dossiers/senlin_website]]。注意：GitHub 叫 `senlin_website`，本地叫 `my_website`，package.json 内部叫 `robotdoctor-tech-website`，业务域名 codebn / codebona。
+> 乐启享的机构门面 + 业务承接站。家长能看到课程和学员作品,老师能管理学员,系统能跑得动。
 
 ## 一句话
-**机构门面 + 业务承接站**：Express + MySQL 主站（3000），独立 AI 代理（3001）只允许白名单 origin 调 DeepSeek，关键词围绕“科技比赛 / 特长生 / NOIP / 机器人竞赛 / 宜昌 / 猇亭区”。
 
-## 状态
-- 本地仓：C:\kaifa\my_website
-- 远程仓：zhaosenlin12-creator/senlin_website
-- 主域名：senlin-c1n.pages.dev（Cloudflare Pages） / senlinwebsite.vercel.app 备用
-- 业务域名：codebn.cn / codebona.cn / codebona.cn
-- 部署：PM2 ecosystem.config.js（cwd `/var/www/codebn`，max_memory_restart 1G）
+**机构对外的官网 + 对内的业务系统**。家长能在 1 次点击内看到课堂、作品、抖音,老师能管理学员,系统跑得稳。
 
-## 技术栈（实测自 package.json）
-- Node.js >=14
-- Express ^4.18.2 + cors ^2.8.5 + dotenv ^17.2.1 + uuid ^9.0.1
-- mysql2 ^3.14.3
-- @supabase/supabase-js ^2.56.0（可选）
-- nodemon ^3.0.1（dev）
+```mermaid
+graph LR
+  Visitor[访客] --> Site[机构站]
+  Parent[家长] --> Site
+  Teacher[老师] --> Site
+  Admin[管理员] --> Site
 
-## 后端（server.js 32KB）
-- MySQL 连接池（utf8mb4 / connectionLimit 10 / 自动 ping）
-- CORS 白名单（env `ALLOWED_ORIGINS`，默认 codebn.cn 系列 + localhost）
-- 文件访问黑名单：`/.env` / `/server.js` / `/package.json` 等
-- 管理员登录：`/api/admin-login`，token 持久化到 `data/admin-tokens.json`（重启不丢）
-- 频率限制：1 秒内同 IP 最多 10 次 `POST /api/*`，超过 429
-- 访问记录：visits 表
-- AI 代理路由：`/api/chat` 转发到 `http://localhost:3001/api/chat`
-- 安全：`aes-256-cbc` 解密 env（密钥截前 32 位）
+  Site --> S1[主页<br/>课程 + 作品]
+  Site --> S2[赛事页<br/>NOIP / 比赛]
+  Site --> S3[预约页<br/>体验课]
+  Site --> S4[管理后台<br/>学员 / 访问统计]
 
-## AI 代理（ai-proxy.js 独立进程）
-- 端口 3001
-- origin 校验：localhost:3000 / codebona.cn
-- DeepSeek：`deepseek-chat` + max_tokens 200 + temperature 0.3 + top_p 0.95
-- ⚠️ **API key 用 base64 编码**（`sk-66b7d339bd1146b3b0de45dbbcaaa22a`），严重安全漏洞
+  Site --> DB[(MySQL 数据库)]
+  Site --> AI[AI 代理<br/>DeepSeek 接入]
 
-## 关键文件
-- admin-dashboard.html 92KB + admin-dashboard.js 48KB（管理后台）
-- index.html 88KB + script.js 32KB（主页）
-- server.js 32KB + styles.css 25KB
-- competitions.html 123KB（赛事页面）+ booking.html 37KB
+  AI --> Chat[家长咨询]
+  AI --> Quiz[学员测试]
+```
 
-## 下一步
-- [ ] ai-proxy 的 API key 改用 env，删 base64 行
-- [ ] 管理员密码从硬编码迁到 `ADMIN_PASSWORD` env
-- [ ] 文件型 token 改成 DB 或 Redis
-- [ ] 加 helmet / hpp / compression
-- [ ] bookings / competitions 单独拆表
+## 实际跑什么
 
-## 关联
-- [[60_Assets/dossiers/senlin_website]]
-- [[20_Projects/open_leqixiang]]
-- [[20_Projects/python-adventure]]
-- [[40_Content/curerforest-channel]]（抖音承接入口）
+- **官网首页**:课程介绍 + 学员作品 + 抖音入口
+- **赛事页**:NOIP / 机器人竞赛 / 特长生招生信息
+- **预约页**:体验课预约,直接对接客服
+- **管理后台**:学员管理 / 访问统计 / 联系人收集
+- **AI 咨询**:用 DeepSeek 答疑 + 自动出题
+
+## 部署在哪
+
+- 主站:**senlin-c1n.pages.dev**(Cloudflare Pages)
+- 备用:**senlinwebsite.vercel.app**
+- 业务域名:codebn.cn / codebona.cn
+- 服务器 PM2 部署在 120.26.114.244
+
+## 为什么这个项目重要
+
+- **业务承接**:学员报名 / 家长咨询 / 作品展示 都在这
+- **可信度门面**:家长第一眼看到的网站,决定信不信你
+- **数据沉淀**:学员数据 / 访问数据 / 抖音导流数据
+
+## 我从这里学的
+
+- **白名单鉴权**:URL 黑名单 + 文件黑名单 + CORS 白名单
+- **AI 代理独立进程**:不污染主站代码 + 便于限流
+- **多端部署**:Cloudflare / Vercel / 宝塔 PM2 都有兜底
+
+## 看真实档案
+
+想知道 server.js 实现、CORS 配置、AI 代理安全漏洞 → [[60_Assets/dossiers/senlin_website]]

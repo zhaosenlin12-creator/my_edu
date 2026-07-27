@@ -115,3 +115,22 @@ tags: teaching,dossier,ursina,python,k12,project-based
 - [ ] 把 Kenney 模型清单做成 60_Assets/teaching-assets.md
 - [ ] 把 Ursina 速查做成 30_Teaching/ursina-cheatsheet.md
 - [ ] 把 day1-day7 教案重写成 Obsidian 卡 + 留 starter/complete 链接
+
+## 事实 / 推断 / 待确认
+
+### 事实(可验证)
+- 18 个分类(艺术编程 1-10 到 AI 单元 111-120)
+- 7 天创客营用 Ursina + Kenney
+- 评分:完成度 40% / 创意 30% / 代码 15% / 展示 15%
+- 寒创赛营 day1-day7 都有 starter/complete/final
+- 坦克大战含长江江豚 / 三峡救援 / 火星探险主题
+
+### 推断(基于事实,但要警惕)
+- 课程体系适合小学高年级到初中
+- ISO 化是当前最大瓶颈
+- 学员作品镜像在 C:\kaifa_teacher
+
+### 待确认(下次更新时核实)
+- 哪些课真正跑过
+- 学员作品数量
+- 教案 / PPT / 源码是否齐全

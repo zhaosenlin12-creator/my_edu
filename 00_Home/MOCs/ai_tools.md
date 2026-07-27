@@ -4,36 +4,71 @@ status: active
 domain: ai
 audience: self
 updated_at: 2026-07-27
-tags: moc,ai
+tags: moc,ai,tools
 ---
 
-# AI 与开发工具地图
+# AI 工具入口
 
-## AI 协作
-- [[50_AI/codex]]：开发、知识整理、审计和自动化
-- [[50_AI/claude-ai]]：长文结构与第二视角
-- [[50_AI/deepseek-api]]：真实项目中的模型 API
+> 我日常用的 AI 工具和工作流。dossier 是入口门槛。
 
-## 工程开发
-- [[50_AI/intellij-idea]]：项目打开、编译、运行、测试和调试
-- [[50_AI/codex-computer-use]]：Windows 桌面操作与验收
-- [[50_AI/codex-browser]]：在线研究与网页核验
+## 工具全景
 
-## 学习与术语
-- [[50_AI/vibe-hub]]
-- [[50_AI/AI编程学习路线]]
-- [[70_Sources/index]]
+```mermaid
+graph TB
+  AI[AI 工具] --> Dev[开发]
+  AI --> Content[内容]
+  AI --> Teach[教学]
+  AI --> Fetch[抓取]
+  AI --> KB[知识库]
 
-## 已归档
-- [[90_Archive/trea-cn]]：Trae 曾被记录，但当前没有不可替代证据
+  Dev --> D1[Codex]
+  Dev --> D2[IntelliJ IDEA]
+  Dev --> D3[DeepSeek]
 
-## 决策口径
-1. 是否解决真实任务？
-2. 结果能否验证？
-3. 相比现有工具有什么独特价值？
-4. 成本、隐私和失败边界是什么？
-5. 是否值得写入长期工具链？
+  Content --> C1[Claude Code]
+  Content --> C2[AirTable AI]
 
-## 入口
-- [[50_AI/index]]
-- [[10_Profile/能力地图]]
+  Teach --> T1[DeepSeek 出题]
+  Teach --> T2[学生作品评测]
+
+  Fetch --> F1[Scrapling]
+  Fetch --> F2[firecrawl]
+
+  KB --> K1[本知识库]
+  KB --> K2[VibeHub 离线]
+```
+
+## 我日常用的
+
+| 工具 | 用途 | 档案 |
+|---|---|---|
+| **Codex** | 默认开发 + 知识库共建 + 抓取 / 检索 / 自动化 | [[50_AI/]] |
+| **DeepSeek** | Python 冒险岛自动出题 | [[60_Assets/dossiers/python-adventure]] |
+| **Scrapling** | 本地抓取(代替 firecrawl) | [[20_Projects/Scrapling]] |
+| **firecrawl** | 全站抓取(备用) | [[20_Projects/firecrawl]] |
+| **Claude Code** | 内容创作辅助 | - |
+| **IntelliJ IDEA 2026.1** | 工程打开、编译、运行、测试、调试 | [[50_AI/intellij-idea]] |
+
+## Codex 会话数据
+
+- 会话总数:**92 个**
+- 落档位置:`[[60_Assets/codex-session-digest.json]]`
+- 摘要:`[[60_Assets/codex-session-summary.md]]`
+
+## 评测口径
+
+每个新 AI 工具进入我的工作流前,必须先写 dossier:
+- 用途 / 谁用 / 替代什么
+- 风险 / 替代方案
+- 真实项目验证
+
+## 找具体 AI 卡
+
+- 工具档案:`[[50_AI/index]]`
+- VibeHub 资料:`[[70_Sources/vibe-hub/]]`(484 页离线)
+
+## 入口也看
+
+- [[00_Home/MOCs/projects]] · 项目入口
+- [[00_Home/MOCs/teaching]] · 教学入口
+- [[00_Home/MOCs/content]] · 内容入口

@@ -66,3 +66,22 @@ tags: project,dossier,nextjs,three,r3f,3d
 - [ ] 把宜昌博物馆真实馆藏做成 ContentBundle，跟 open_leqixiang 一样
 - [ ] 加 Playwright 端到端：降落到地表 → 旋转 → 离开
 - [ ] 把 tsx 检查脚本改成 vitest，跑进 npm test
+
+## 事实 / 推断 / 待确认
+
+### 事实(可验证)
+- package.json v1.0.0, Next.js 14.2.15
+- three 0.169 + R3F 8.17.10 + drei 9.117.0
+- 本地两个副本(C:\kaifa + C:\kaifa_senlin)
+- README 给出 4 个 tsx 自检脚本
+- 不是 git 仓库(本地)
+
+### 推断(基于事实,但要警惕)
+- 本地不是 git 仓可能是为了快速迭代
+- 宜昌博物馆馆藏是用户提的下一阶段素材
+- 和 open_leqixiang 一样走 ContentBundle 路线
+
+### 待确认(下次更新时核实)
+- 两个本地副本哪个是主仓
+- 是否要迁移真实馆藏
+- Playwright 端到端是否要做

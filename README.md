@@ -2,60 +2,73 @@
 type: readme
 status: active
 updated_at: 2026-07-27
-tags: readme,entry
+tags: readme,entry,portal
 ---
 
-# 我的个人知识库 · 森林
+# 愈见森林的个人知识库
 
-> 这不是又一个“个人 PKM 模板”，是基于真实项目 / 抖音 / 直播 / 教学 / Codex 会话沉淀出来的可用系统。每张卡片都能跳到 [[60_Assets/dossiers]] 的真实档案。
+> 这是**森林**(赵森林)的个人操作系统,生产级别,可以直接给同行 / 徒弟 / 家长看。
 
-## 怎么开始
-1. 看 [[10_Profile/我是谁]] / [[10_Profile/我在哪]] / [[10_Profile/我要去哪]] / [[10_Profile/能力地图]] → 哲学三问 + 能力地图
-2. 从 [[00_Home/MOCs/projects]] / [[00_Home/MOCs/teaching]] / [[00_Home/MOCs/content]] / [[00_Home/MOCs/ai_tools]] 四个入口挑一个
-3. 想看“这件事到底有什么证据”→ 直接到 [[60_Assets/dossiers/]]
-4. 想看我和 AI 的对话数据 → [[60_Assets/codex-session-digest.json]]
+```mermaid
+graph LR
+  Portal[个人门户<br/>senlin-c1n.pages.dev] --> KV[本知识库]
+  KV --> P1[我是谁]
+  KV --> P2[做什么]
+  KV --> P3[怎么学]
+  KV --> P4[怎么用]
+  KV --> P5[怎么成长]
 
-## 我是谁（在做什么）
-- 森林（赵森林），湖北宜昌猇亭，乐启教育（乐启享）合伙人 / 副校长
-- 项目：Web（Vite / Next.js / Express）/ 3D（Three / R3F / Phaser / Pyodide / Ursina）/ 业务系统 / 教学资产
-- 内容：抖音“愈见森林”+ 直播六轮 SOP + 教学体系 18 单元
-- AI：Codex + DeepSeek + 自托管脚本，92 个会话已落档
+  P1 --> ID[10_Profile]
+  P2 --> Projects[20_Projects]
+  P3 --> Teaching[30_Teaching]
+  P4 --> Content[40_Content]
+  P5 --> AI[50_AI]
+```
 
-## 7 个核心 dossier（必看）
-| dossier | 范围 | 文件大小 |
-|---|---|---|
-| [[60_Assets/dossiers/open_leqixiang]] | 乐其翔展览系统（Vite + React 19 + TS 5.9） | 5 KB |
-| [[60_Assets/dossiers/python-adventure]] | Python 冒险岛（Next 16 + Phaser + Pyodide + FastAPI） | 6 KB |
-| [[60_Assets/dossiers/senlin_website]] | 智创未来编程学院（Express + MySQL + AI 代理） | 5 KB |
-| [[60_Assets/dossiers/world_website]] | 宇宙探索互动站（Next 14 + R3F 8 + three 0.169） | 4 KB |
-| [[60_Assets/dossiers/douyin]] | 愈见森林（151 粉 → 1000 粉计划） | 7 KB |
-| [[60_Assets/dossiers/live-streaming]] | 直播 6 轮 SOP（数据驱动版） | 7 KB |
-| [[60_Assets/dossiers/teaching]] | 教学体系（18 分类 + 7 天创客营） | 7 KB |
+## 我是谁
 
-## 数据资产
-- 92 个 Codex 会话：[[60_Assets/codex-session-digest.json]] + [[60_Assets/codex-session-summary.md]]
-- 32 个 GitHub 仓库：[[60_Assets/GitHub仓库总账]] + [[60_Assets/github-repositories.csv]]
-- 本地 36 个目录 + 21 个 git 仓库：[[60_Assets/local-kaifa-directories.csv]] + [[60_Assets/local-git-repositories.csv]]
-- 894 个教学目录：[[60_Assets/teaching-packages.csv]]（本机检索，不入 GitHub）
-- 484 页 VibeHub 离线（[[70_Sources/vibe-hub/]]）：本地可读，不入 GitHub
+- [[10_Profile/我是谁]] · 我的来历、几件事、价值主张
+- [[10_Profile/我在哪]] · 现在做哪些事、做到什么程度
+- [[10_Profile/我要去哪]] · 一年目标 + 关键里程碑
+- [[10_Profile/能力地图]] · 能交付 / 在补 / 不接
 
-## 仓库
-- 本地 vault：`C:\my_know`
-- 远程：`https://github.com/zhaosenlin12-creator/my_edu.git`
-- HEAD：`37c22be`
-- Obsidian 打开：`C:\kaifa_boot\Obsidian\Obsidian.exe -ArgumentList 'C:\my_know'`
+## 我做什么(项目)
 
-## 工作流（每加一条都走一遍）
-1. 先建 [[60_Assets/dossiers/<name>]] · 事实 / 推断 / 待确认 / 下一步
-2. 再写 [[20_Projects/<name>]] / [[30_Teaching/<name>]] / [[40_Content/<name>]] · 引用 dossier
-3. 必要时更新 [[10_Profile/能力地图]]（每条都能跳到 dossier）
-4. 季度跑一次 `review-dossiers.py`（待建）
+- [[20_Projects/index]] · 30+ 个项目全景
+- [[60_Assets/dossiers/]] · 7 个核心项目的真实档案
+  - [乐其翔展览系统](file:///C:/my_know/60_Assets/dossiers/open_leqixiang.md)
+  - [Python 冒险岛](file:///C:/my_know/60_Assets/dossiers/python-adventure.md)
+  - [智创未来编程学院机构站](file:///C:/my_know/60_Assets/dossiers/senlin_website.md)
+  - [宜昌宇宙探索互动站](file:///C:/my_know/60_Assets/dossiers/world_website.md)
+
+## 我怎么教(教学)
+
+- [[30_Teaching/index]] · 教学体系
+- [[60_Assets/dossiers/teaching]] · 18 单元分类 + 7 天创客营档案
+
+## 我怎么说(内容)
+
+- [[40_Content/index]] · 抖音 + 直播 + 个人内容
+- [[60_Assets/dossiers/douyin]] · 愈见森林 151 → 10000 粉
+- [[60_Assets/dossiers/live-streaming]] · 直播 6 轮 SOP
+
+## 我怎么用 AI
+
+- [[50_AI/index]] · 工具与工作流
+- [Codex 会话数据(92 个)](file:///C:/my_know/60_Assets/codex-session-digest.json) · 落档可检索
+
+## 快速开始
+
+- 第一次打开?看 [[00_Home/快速使用指南]]
+- 想知道这个库怎么搭出来的?看 [[00_Home/我是怎么建这个库的]]
+
+## 仓库信息
+
+- 本地:`C:\my_know`(git 仓)
+- 远程:`https://github.com/zhaosenlin12-creator/my_edu.git`
+- 当前 HEAD:`37c22be`
+- Obsidian 打开:开始菜单搜 Obsidian(或桌面双击 `Obsidian-MyEdu.bat`)
 
 ## 隐私 / 同步
-- `.obsidian/workspace, cache, themes, plugins` 本地
-- `70_Sources/vibe-hub/pages/` 大文件不入 GitHub
-- `60_Assets/local-*.csv` 与 `teaching-packages.csv` 只本机检索
-- `__pycache__/` 与 `.mp4 .mov .psd .zip .rar .7z` 不入
 
-## 4 个徒弟
-- 我（森林）把本知识库作为参考，让他们搭自己的，不要替他们制定目标
+本知识库的 `.obsidian/`、`70_Sources/vibe-hub/pages/`、本地 CSV 都不进 GitHub。详见 `.gitignore`。

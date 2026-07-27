@@ -3,85 +3,61 @@ type: project
 status: active
 domain: game,teaching
 audience: student,parent,teacher
-repo: zhaosenlin12-creator/python-adventure（GitHub 命名）
-local_path: C:\kaifa\game-google
 url: https://game.codebn.cn
-server_ip: 120.26.114.244
 dossier: "[[60_Assets/dossiers/python-adventure]]"
 updated_at: 2026-07-27
-tags: nextjs,phaser,pyodide,fastapi,deepseek,teaching
+tags: game,python,education
 ---
 
-# python-adventure · Python 冒险岛
+# Python 冒险岛
 
-> **证据第一**：详情看 [[60_Assets/dossiers/python-adventure]]。
+> 让孩子在冒险中学 Python 的游戏化学习平台。宜昌猇亭本土地理 + AI 自动出题 + 三种模式。
 
 ## 一句话
-**面向宜昌猇亭小学生的 Python 学习游戏**：Next.js 16 + React 19 + Phaser 3 + Pyodide + FastAPI 全栈，DeepSeek AI 自动出题、按年龄段切题库、宜昌本土地理文化塞进战役。
 
-## 状态
-- 本地仓：C:\kaifa\game-google
-- 远程仓：zhaosenlin12-creator/python-adventure（GitHub 总账未列，可能私有）
-- 部署：game.codebn.cn / 前端 3003 (PM2 id=3) / 后端 8000 (PM2 id=4)
-- 版本：package.json v2.3.0，README v2.4.7（**不一致**）
-- 启动：本地后端 `python init_db_quick.py && python run.py`；前端 `npm install && npm run dev`
+**孩子玩着玩着就会写 Python 了**。三种模式(章节 / 战役 / 开放世界),按年龄分段(小学低 / 小学高 / 初中),AI 出题覆盖 10 科目,跑在浏览器里,部署在云上。
 
-## 技术栈（实测自 package.json）
-- Next.js ^16.2.6 + React 19.2.0 + react-dom 19.2.0
-- Phaser ^3.90.0 + Pyodide ^0.29.0
-- framer-motion ^12.23.24 + lottie-react ^2.4.1 + @react-spring/web ^10.0.3
-- @monaco-editor/react ^4.7.0
-- canvas-confetti + react-window + tailwindcss ^4 + zustand ^5.0.8
-- 后端：FastAPI + SQLAlchemy + SQLite
-- 测试 / 质量：jest ^29 / ts-jest / fast-check / @playwright/test ^1.58.2 / eslint ^9
+```mermaid
+graph LR
+  Player[孩子] --> Game[Python 冒险岛]
+  Teacher[老师] --> Game
+  Parent[家长] --> Game
 
-## 三大模式
-| 模式 | 内容 |
-|---|---|
-| 章节模式 | 8 大章节 40+ 关卡，Python 基础 / 逻辑 / 循环 / 函数 |
-| 战役模式 | 10 大战役，平台跳跃 + 重力翻转 + Boss 战 + 风力系统 |
-| 开放世界 | 自由探索猇亭地图，与 NPC 互动 |
+  Game --> M1[章节模式]
+  Game --> M2[战役模式]
+  Game --> M3[开放世界]
 
-## 年龄分段（lib/questionBank/）
-- 小学低年级 (1-3) / 小学高年级 (4-6) / 初中 (7-9)
-- 10 个科目：数学 / 语文 / 英语 / 物理 / 化学 / Python / Scratch / 趣味推理 / 趣味历史 / 科学常识
-- 物理 / 化学只对初中显示
+  M1 --> M1a[40+ 关卡<br/>从 print 到函数]
+  M2 --> M2a[10 个战役<br/>宜昌本地文化]
+  M3 --> M3a[猇亭地图<br/>自由探索 + NPC]
 
-## AI 智能出题（v2.3.0, 2024-12-28）
-- 5 个模板：口算 / 成语 / 单词 / 脑筋急转弯 / 历史趣闻
-- 后端读 `backend/.env` 里的 `DEEPSEEK_API_KEY` / `DEEPSEEK_API_URL` / `DEEPSEEK_MODEL`
-- 生成结果可预览、编辑、选择性导入
+  Game --> AI[AI 自动出题]
+  AI --> A1[DeepSeek]
+  AI --> A2[10 科目]
+  AI --> A3[按年龄过滤]
+```
 
-## 安全机制（v2.3.0）
-- JWT Token 黑名单（登出后立即失效）
-- WebSocket 身份验证（PVP / 开放世界）
-- bcrypt 密码哈希，兼容旧密码自动升级
-- PVP 60s 内最多建 3 个房间
-- 创意工坊 XSS 消毒
+## 三种模式怎么玩
 
-## 后端（backend/app/api/v1/）共 32 个路由
-pets.py 26976 / pvp.py 33475 / pvp_battle_royale.py 66956 / typing.py 25847 / world.py 30098 是重头
-29 个 SQLAlchemy 模型：user / character / pet / decoration / food / skill / task / quiz_battle / custom_level / battle / chat / coin / user_question / progress / achievement / dynamic_task / ai_robot / typing / user_location / error_log ...
+| 模式 | 适合谁 | 内容 |
+|---|---|---|
+| **章节模式** | 入门 | 8 大章节 40+ 关卡,从 `print` 到函数 |
+| **战役模式** | 进阶 | 10 个战役,平台跳跃 + 重力翻转 + Boss 战 + 风力系统 |
+| **开放世界** | 喜欢自由探索 | 猇亭地图 + NPC 互动 + 隐藏任务 |
 
-## 部署强约束（MAINTENANCE.md）
-1. Node 必须指定版本：`/www/server/nodejs/v20.19.6/bin/node`
-2. Python 必须用项目 venv：`/www/wwwroot/game-backend/venv/bin/python`
-3. 生产数据库在 `/www/data/game-backend/code_adventure.db`，**绝不能覆盖**
-4. **不要 `pkill -9 -f python`**（会杀宝塔面板），只杀 `kill $(lsof -t -i:8000)`
-5. 唯一部署准则：`deploy/DEPLOY_SERVER_EXACT.md`
-6. 前端必须指定端口 3003，否则 502
-7. PM2 改完必须 `pm2 save`
-8. 更新前端必须 `rm -rf /www/server/nginx/proxy_cache_dir/*` + `nginx reload`
+## 为什么这个项目被验证
 
-## 下一步
-- [ ] 把 package.json 版本与 README 对齐
-- [ ] 用本地 LLM 替掉 DeepSeek 出题
-- [ ] 宠物聊天本地预制对话做成独立模块
-- [ ] 删 deploy/ 旧脚本，只留 DEPLOY_SERVER_EXACT.md
-- [ ] PVP / 开放世界监控接入 PM2 + 飞书/钉钉告警
+- **真实部署**:game.codebn.cn 上线,PM2 管理
+- **真实用户**:学员在用,作品能上台展示
+- **真实 AI**:DeepSeek 接入,出题覆盖 10 科目 × 3 年龄段 × 5 模板
+- **真实本地化**:战役背景是宜昌猇亭,小孩有代入感
 
-## 关联
-- [[60_Assets/dossiers/python-adventure]]
-- [[20_Projects/open_leqixiang]]
-- [[20_Projects/senlin_website]]
-- [[30_Teaching/index]]（AI 出题对接教学）
+## 我从这里学的
+
+- **用 Pyodide 在浏览器跑 Python** —— 不用后端也能执行代码
+- **按年龄分段的数据层** —— 题库 / 课程 / UI 三层分段
+- **复杂游戏版本管理** —— CI 出包 → 宝塔传包 → PM2 重启
+
+## 看真实档案
+
+想知道后端 32 个路由、29 个模型、部署强约束 → [[60_Assets/dossiers/python-adventure]]
