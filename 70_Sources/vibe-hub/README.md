@@ -1,49 +1,36 @@
-# VibeHub 本地学习捕获
+# VibeHub 鏈湴瀛︿範鎹曡幏
 
-- 来源：https://vibe-hub.org/
-- Sitemap：https://vibe-hub.org/sitemap.xml
-- 抓取日期：2026-07-27
-- 抓取引擎：Scrapling（默认；本地无需 API key）
-- 抓取结果：484 项（中文 242 + 英文 242），失败 0
+- 鏉ユ簮锛歨ttps://vibe-hub.org/
+- Sitemap锛歨ttps://vibe-hub.org/sitemap.xml
+- 鎶撳彇鏃ユ湡锛?026-07-27
+- 鎶撳彇寮曟搸锛歋crapling锛堥粯璁わ紱鏈湴鏃犻渶 API key锛?- 鎶撳彇缁撴灉锛?84 椤癸紙涓枃 242 + 鑻辨枃 242锛夛紝澶辫触 0
 
-## 三种使用方式
+## 涓夌浣跨敤鏂瑰紡
 
-### 1. 在 Obsidian 里检索（推荐日常）
+### 1. 鍦?Obsidian 閲屾绱紙鎺ㄨ崘鏃ュ父锛?
+- 鍦?`pages/` 閲屾寜鐩綍璧拌锛涗腑鏂囧湪 `zh/`锛岃嫳鏂囧湪 `en/`
+- 鐢?Excel 鎵撳紑 `index.csv`锛屾寜璇█銆佸垎绫汇€佹爣棰樼瓫閫?- 鎯虫壘涓婚褰掔被鏃舵墦寮€ `zh/topics/` 鎴?`en/topics/`锛圓I銆丅ackend銆丏esign銆丟it銆丳roduct銆乀echnology 鍏釜鍒嗙被绱㈠紩椤碉級
 
-- 在 `pages/` 里按目录走读；中文在 `zh/`，英文在 `en/`
-- 用 Excel 打开 `index.csv`，按语言、分类、标题筛选
-- 想找主题归类时打开 `zh/topics/` 或 `en/topics/`（AI、Backend、Design、Git、Product、Technology 六个分类索引页）
-
-### 2. 在浏览器里像原站一样预览（推荐体验）
-
-`site/` 是完整镜像（HTML + CSS + JS + 图片），启动本地服务器即可在浏览器看到与 vibe-hub.org 一致的页面、交互和样式：
-
+### 2. 鍦ㄦ祻瑙堝櫒閲屽儚鍘熺珯涓€鏍烽瑙堬紙鎺ㄨ崘浣撻獙锛?
+`site/` 鏄畬鏁撮暅鍍忥紙HTML + CSS + JS + 鍥剧墖锛夛紝鍚姩鏈湴鏈嶅姟鍣ㄥ嵆鍙湪娴忚鍣ㄧ湅鍒颁笌 vibe-hub.org 涓€鑷寸殑椤甸潰銆佷氦浜掑拰鏍峰紡锛?
 ```powershell
 python -m http.server 8765 --directory C:\my_know\70_Sources\vibe-hub\site
 ```
 
-然后浏览器打开 <http://localhost:8765/>。中文站走 `/`，英文站走 `/en/`。
-
-> 第一次启动镜像耗时 3-5 分钟，484 页 + 532 资源。后续若要刷新：
+鐒跺悗娴忚鍣ㄦ墦寮€ <http://localhost:8765/>銆備腑鏂囩珯璧?`/`锛岃嫳鏂囩珯璧?`/en/`銆?
+> 绗竴娆″惎鍔ㄩ暅鍍忚€楁椂 3-5 鍒嗛挓锛?84 椤?+ 532 璧勬簮銆傚悗缁嫢瑕佸埛鏂帮細
 > ```powershell
 > python C:\Users\Administrator\.codex\skills\website-knowledge-crawler\scripts\mirror_site.py `
 >     https://vibe-hub.org C:\my_know\70_Sources\vibe-hub\site --workers 6
 > ```
 
-### 3. 让 Codex 检索（推荐 AI 辅助）
+### 3. 璁?Codex 妫€绱紙鎺ㄨ崘 AI 杈呭姪锛?
+姣忎釜 `pages/**/*.md` 閮芥槸娓呮磥鐨?Markdown锛屽墠缃?`type / source_url / title / language / category / engine / fetched_at`銆傚湪 Codex 閲岀洿鎺ヨ銆屽幓 70_Sources/vibe-hub 鎵?XX銆嶅嵆鍙储寮曟绱€?
+## 瀛︿範璺嚎
 
-每个 `pages/**/*.md` 都是清洁的 Markdown，前置 `type / source_url / title / language / category / engine / fetched_at`。在 Codex 里直接说「去 70_Sources/vibe-hub 找 XX」即可索引检索。
-
-## 学习路线
-
-按 [[50_AI/AI编程学习路线]] 的顺序走，不建议从头读到尾。先做分类页的通读，再按需钻单点术语。
-
-## 抓取与同步
-
-- 抓取 skill：`website-knowledge-crawler`（位于 `~/.codex/skills/website-knowledge-crawler/`）
-- 默认引擎：Scrapling（本地、无需 API key）
-- 备选引擎：Firecrawl（需要 `FIRECRAWL_API_KEY` 与 `FIRECRAWL_API_URL` 环境变量）
-- 全量更新（Markdown）：
+鎸?[[50_AI/AI缂栫▼瀛︿範璺嚎]] 鐨勯『搴忚蛋锛屼笉寤鸿浠庡ご璇诲埌灏俱€傚厛鍋氬垎绫婚〉鐨勯€氳锛屽啀鎸夐渶閽诲崟鐐规湳璇€?
+## 鎶撳彇涓庡悓姝?
+- 鎶撳彇 skill锛歚website-knowledge-crawler`锛堜綅浜?`~/.codex/skills/website-knowledge-crawler/`锛?- 榛樿寮曟搸锛歋crapling锛堟湰鍦般€佹棤闇€ API key锛?- 澶囬€夊紩鎿庯細Firecrawl锛堥渶瑕?`FIRECRAWL_API_KEY` 涓?`FIRECRAWL_API_URL` 鐜鍙橀噺锛?- 鍏ㄩ噺鏇存柊锛圡arkdown锛夛細
 
   ```powershell
   python C:\Users\Administrator\.codex\skills\website-knowledge-crawler\scripts\crawl_site.py `
@@ -51,13 +38,12 @@ python -m http.server 8765 --directory C:\my_know\70_Sources\vibe-hub\site
       --workers 4 --delay 0.15 --engine scrapling
   ```
 
-- 全量镜像（HTML）：
+- 鍏ㄩ噺闀滃儚锛圚TML锛夛細
 
   ```powershell
   python C:\Users\Administrator\.codex\skills\website-knowledge-crawler\scripts\mirror_site.py `
       https://vibe-hub.org C:\my_know\70_Sources\vibe-hub\site --workers 6
   ```
 
-- 难爬站点可用 auto 引擎自动回退到 Firecrawl。
-
-- `pages/` 已纳入 git，可在 GitHub 仓库看到完整捕获内容。`site/` 因体积较大不进 git，本地按需生成。
+- 闅剧埇绔欑偣鍙敤 auto 寮曟搸鑷姩鍥為€€鍒?Firecrawl銆?
+- `pages/` 宸茬撼鍏?git锛屽彲鍦?GitHub 浠撳簱鐪嬪埌瀹屾暣鎹曡幏鍐呭銆俙site/` 鍥犱綋绉緝澶т笉杩?git锛屾湰鍦版寜闇€鐢熸垚銆
