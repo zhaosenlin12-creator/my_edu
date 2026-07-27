@@ -1,51 +1,91 @@
 ---
-type: ai_tool
+type: ai
 status: active
-domain: ai,development,knowledge
+domain: ai,tool,development
 audience: self
-repo: https://github.com/openai/codex
-url: https://openai.com/codex/
-summary: 当前主力 AI 协作工具，用于开发、知识整理、审计与自动化
-next_action: 固化项目启动、验证、复盘三类标准提示词
+tool: OpenAI Codex
+usage: 主开发助手 + 知识库共建 + 自动化
+sessions: 92(已落档)
 updated_at: 2026-07-27
-tags: ai,codex,agent,development
+tags: ai,codex,assistant
 ---
 
 # Codex
 
-> 森林当前的默认 AI 开发搭档，也是知识库的主要共建者。
+> 我的**主开发助手** + **知识库共建助手** + **自动化工具**。92 个会话已落档可检索。
 
-## 已验证用途
-- 阅读本地仓库、修改代码、运行测试、处理 Git 工作流
-- 把散落项目、教案和运营资料提炼为结构化笔记
-- 对现有实现做代码审查、回归验证和部署前检查
-- 基于同一工作区持续完成多步骤任务
+## 一句话
 
-## 最适合交给它
-- 边界明确、能通过文件或命令验证的开发任务
-- 跨多个仓库的盘点、迁移、索引和文档维护
-- 重复性脚本、课程素材整理、数据复盘模板
+Codex 是 OpenAI 出品的代码 + 推理助手,在桌面 Codex++ 里跑。我用它**写代码 / 读项目 / 写知识卡 / 抓数据 / 自动化**。92 个会话已经落档成 JSON,下次出问题可以直接搜。
 
-## 不直接相信
-- 未读取原始材料时给出的个人判断
-- 未运行测试时声称“已经修好”
-- 涉及账号、付款、删除和发布的高风险操作
-- 对平台规则、价格和时效信息的记忆，需要联网核验
+## 我用它做什么
 
-## 我的使用协议
-1. 先说明目标、目录、约束和验收标准。
-2. 要求先读仓库，再沿用项目已有模式。
-3. 重要任务必须给出测试、截图或命令结果。
-4. 对个人画像区分事实、推断和待确认。
-5. 有复用价值的结论回写本知识库，不只留在对话里。
+```mermaid
+graph LR
+  Codex --> W[写代码]
+  Codex --> R[读项目]
+  Codex --> KB[写知识卡]
+  Codex --> F[抓数据]
+  Codex --> A[自动化]
 
-## 与 IntelliJ 的分工
-- Codex：分析、修改、命令验证和知识整理
-- IntelliJ：工程配置、编译、运行、测试、调试和人工确认
+  W --> W1[Web / 3D / 教学产品]
+  R --> R1[读 C:\kaifa\* 项目代码]
+  KB --> KB1[本知识库共建]
+  F --> F1[网站抓取 + 数据清洗]
+  A --> A1[PowerShell 脚本 + Python]
+```
 
-## 关联
-- [[00_Home/MOCs/ai_tools]]
-- [[10_Profile/能力地图]]
-- [[50_AI/intellij-idea]]
-- [[50_AI/codex-browser]]
-- [[50_AI/codex-computer-use]]
+## 真实数据
+
+- **会话总数**:92 个(2026-07-27 之前)
+- **落档位置**:`[[60_Assets/codex-session-digest.json]]` + `[[60_Assets/codex-session-summary.md]]`
+- **高频主题**:PPT / Godot / open_leqixiang / karpathy skills / Scrapling / world_website / 抖音 / Vibe Coding
+- **高频工具**:PowerShell / Hero / Godot / Vite / Codex 工具调用
+
+## 我的使用模式
+
+| 场景 | 怎么用 |
+|---|---|
+| **写代码** | 直接对话 → 生成代码 → 复制到 IDE |
+| **读项目** | 让 Codex 读文件路径 → 给我摘要 |
+| **写知识卡** | 让 Codex 把项目档案写成 Obsidian 卡片 |
+| **抓数据** | Codex 写 Python 抓取脚本 → 本地跑 |
+| **自动化** | Codex 写 PowerShell / Python 脚本 → 任务面板跑 |
+
+## 关键优势
+
+- **理解上下文**:能跨多个文件读 + 总结,不用我手动复制粘贴
+- **改代码**:能编辑现有项目,而不是只生成新文件
+- **接工具**:能调用 shell / 文件系统 / 网络
+- **桌面 GUI**:在 Codex++ 1.2.23 桌面应用里跑,可视化
+
+## 关键限制
+
+- **不能跨会话记忆**:每次新会话要重读上下文
+- **Windows 路径敏感**:反斜杠在 PowerShell 命令里要小心
+- **大文件读不动**:超过 token 限制的文件读不全
+- **幻觉**:技术细节(版本号 / 函数名)有时错,必须验证
+
+## 我的工作流
+
+```mermaid
+sequenceDiagram
+  participant Me
+  participant Codex
+  participant IDE
+  participant File
+
+  Me->>Codex: 我想给项目 X 写一份 dossier
+  Codex->>File: 读 package.json / 关键源文件
+  Codex->>Me: 给我真实代码摘要
+  Me->>Codex: 加上我的判断
+  Codex->>File: 写 Obsidian 卡片到 60_Assets/dossiers/
+  Me->>IDE: 用 IntelliJ 打开 vault,验证
+```
+
+## 看相关
+
+- [[60_Assets/codex-session-digest.json]] · 会话主题统计
+- [[50_AI/codex-browser]] · 浏览器模式
+- [[50_AI/codex-computer-use]] · 桌面控制
+- [[50_AI/claude-ai]] · 内容创作替代

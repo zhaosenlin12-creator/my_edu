@@ -1,50 +1,82 @@
 ---
-type: development_tool
+type: ai
 status: active
-domain: development,ide,build
+domain: ai,tool,ide
 audience: self
-repo:
-url: https://www.jetbrains.com/idea/
-summary: 主力工程 IDE，用于项目打开、编译、运行、测试和调试
-next_action: 按具体项目确认 JDK、Maven 或 Gradle 配置
+tool: IntelliJ IDEA 2026.1
+usage: 工程入口 + 编译运行测试调试
 updated_at: 2026-07-27
-tags: intellij,ide,build,debug
+tags: ai,ide,intellij,tool
 ---
 
 # IntelliJ IDEA 2026.1
 
-> IntelliJ 是工程 IDE，不是单独的编译器。它负责组织并调用项目的 JDK、Maven、Gradle、Node.js 等真实工具链。
+> 我日常用的 IDE,**打开 / 编译 / 运行 / 测试 / 调试** 全栈 Java / Kotlin / Python / TS / Web 项目都靠它。
 
-## 已确认安装
-- 版本：IntelliJ IDEA 2026.1 Ultimate
-- Build：261.22158.277
-- 程序：`C:\Users\Administrator\AppData\Local\JetBrains\IntelliJ IDEA 2026.1\bin\idea64.exe`
-- 快捷方式：`C:\Users\Public\Desktop\IntelliJ IDEA 2026.1.lnk`
+## 一句话
 
-## 在我的工具链中的职责
-- 打开和理解大型工程
-- Java / Kotlin 项目调用 JDK、Maven 或 Gradle 编译
-- 运行单元测试、断点调试和查看日志
-- 管理 Git 分支、提交与差异
-- Web 项目通过内置终端调用 `npm`、`pnpm` 或项目脚本
+IntelliJ 是工程入口。Codex 帮我分析 + 写代码,IntelliJ 帮我**跑起来 + 调 bug + 测接口**。两者是 AI 时代的最佳搭档。
 
-## 与 Codex 的分工
-- Codex：读仓库、分析需求、修改代码、执行自动化验证
-- IntelliJ：人工浏览、工程配置、编译运行、调试与最后确认
-- 编译成功不等于功能正确；仍要运行测试和真实业务流程
+## 基本信息
 
-## 为什么不需要 Trae
-- Trae 的核心价值是 AI 编辑器与对话式编码
-- 当前已有 Codex 负责 AI 协作，IntelliJ 负责成熟 IDE 和工程验证
-- Trae 没有形成不可替代的真实任务证据，因此移入 `90_Archive`
+| 维度 | 值 |
+|---|---|
+| 版本 | IntelliJ IDEA 2026.1 |
+| Build | 261.22158.277 |
+| Edition | Ultimate |
+| 路径 | `C:\Users\Administrator\AppData\Local\JetBrains\IntelliJ IDEA 2026.1\bin\idea64.exe` |
+| 桌面快捷方式 | `C:\Users\Public\Desktop\IntelliJ IDEA 2026.1.lnk` |
 
-## 使用检查
-- [ ] 项目使用的 JDK / Node / Python 版本正确
-- [ ] Maven / Gradle / pnpm 依赖完成同步
-- [ ] 编译与测试命令来自仓库说明，而不是凭经验猜
-- [ ] 运行配置没有包含 Token 或生产密钥
+## 我用它做什么
 
-## 关联
-- [[50_AI/codex]]
-- [[20_Projects/index]]
-- [[90_Archive/trea-cn]]
+```mermaid
+graph LR
+  I[IntelliJ] --> Open[打开项目]
+  I --> Run[运行 / 调试]
+  I --> Test[测试]
+  I --> Git[Git 操作]
+
+  Open --> O1[senlin_website Express]
+  Open --> O2[python-adventure Next.js]
+  Open --> O3[open_leqixiang Vite + React]
+  Open --> O4[world_website Next + R3F]
+```
+
+## 跟 Codex 的分工
+
+| 任务 | 用谁 |
+|---|---|
+| 读项目代码 | **Codex** |
+| 写新功能 / 改代码 | **Codex** |
+| 跑 build / dev server | **IntelliJ** |
+| 调 bug / 看 log | **IntelliJ** |
+| 跑测试 / 覆盖率 | **IntelliJ** |
+| Git commit / push | 都可以,Codex 更方便 |
+| 看 Dashboard / 截图 | **浏览器 / Playwright** |
+
+## vs 其他 IDE
+
+| IDE | 我为什么不用 |
+|---|---|
+| VS Code | 启动慢 / 内存大 / 调试不如 IntelliJ |
+| Trae | 2025-2026 已弃用(归档到 [[90_Archive/trea-cn]]) |
+| Cursor | 跟 Codex 重叠,没明显优势 |
+| WebStorm | 子集,IntelliJ Ultimate 已经包含 |
+
+## 我的工作流
+
+```
+Codex 帮我:
+  读项目 → 写代码 → 改代码 → 写卡片
+
+IntelliJ 帮我:
+  打开项目 → npm run dev → 跑测试 → 看 log → 调试
+
+两者衔接:
+  Codex 写到 .md 卡 → IntelliJ 验证代码 → Codex 重新读 → 循环
+```
+
+## 看相关
+
+- [[50_AI/codex]] · 主开发助手
+- [[20_Projects/]] · 7 个核心项目都在 IntelliJ 里开
