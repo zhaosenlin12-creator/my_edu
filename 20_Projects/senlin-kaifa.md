@@ -2,7 +2,7 @@
 type: project
 status: active
 domain: ai,teaching,web
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/senlin-kaifa
 url: https://github.com/zhaosenlin12-creator/senlin-kaifa
 summary: 乐启享 AI Classroom：从主题、提示词或 PDF 生成课堂内容

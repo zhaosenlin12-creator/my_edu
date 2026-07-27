@@ -2,7 +2,7 @@
 type: ai_tool
 status: active
 domain: ai,development,knowledge
-audience: self,apprentice
+audience: self
 repo: https://github.com/openai/codex
 url: https://openai.com/codex/
 summary: 当前主力 AI 协作工具，用于开发、知识整理、审计与自动化
@@ -36,22 +36,16 @@ tags: ai,codex,agent,development
 1. 先说明目标、目录、约束和验收标准。
 2. 要求先读仓库，再沿用项目已有模式。
 3. 重要任务必须给出测试、截图或命令结果。
-4. 对个人画像区分“事实、推断、待确认”。
+4. 对个人画像区分事实、推断和待确认。
 5. 有复用价值的结论回写本知识库，不只留在对话里。
 
-## 徒弟最低要求
-- 能写清楚“输入、期望输出、不能做什么、如何验收”
-- 能看懂 Git diff，不把 AI 输出直接当正确答案
-- 每周沉淀一条可复用提示词或排错案例
-
-## 下一步
-- [ ] 建立项目启动提示词
-- [ ] 建立代码审查提示词
-- [ ] 建立课程包审计提示词
-- [ ] 建立直播数据复盘提示词
+## 与 IntelliJ 的分工
+- Codex：分析、修改、命令验证和知识整理
+- IntelliJ：工程配置、编译、运行、测试、调试和人工确认
 
 ## 关联
 - [[00_Home/MOCs/ai_tools]]
 - [[10_Profile/能力地图]]
+- [[50_AI/intellij-idea]]
 - [[50_AI/codex-browser]]
 - [[50_AI/codex-computer-use]]

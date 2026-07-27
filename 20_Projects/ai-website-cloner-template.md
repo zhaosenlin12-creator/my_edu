@@ -2,7 +2,7 @@
 type: project
 status: evaluate
 domain: ai,web
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/ai-website-cloner-template
 url: https://github.com/zhaosenlin12-creator/ai-website-cloner-template
 summary: 用 AI Agent 复刻网站的 Next.js 模板与工作流

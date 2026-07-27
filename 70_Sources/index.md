@@ -2,7 +2,7 @@
 type: moc
 status: active
 domain: sources,ai
-audience: self,apprentice
+audience: self
 updated_at: 2026-07-27
 tags: sources,learning
 ---

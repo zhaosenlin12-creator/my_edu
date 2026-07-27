@@ -2,7 +2,7 @@
 type: project
 status: evaluate
 domain: ai,canvas,design
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/Cowart
 url: https://github.com/zhaosenlin12-creator/Cowart
 summary: 面向 Codex 的 tldraw 无限画布插件

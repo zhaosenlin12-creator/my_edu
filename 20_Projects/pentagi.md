@@ -2,7 +2,7 @@
 type: project
 status: hold
 domain: ai,security
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/pentagi
 url: https://github.com/zhaosenlin12-creator/pentagi
 summary: 自主渗透测试 Agent 系统研究仓

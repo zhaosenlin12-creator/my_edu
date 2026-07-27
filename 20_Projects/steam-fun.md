@@ -2,7 +2,7 @@
 type: project
 status: active
 domain: teaching,offline
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/steam-fun
 url: https://github.com/zhaosenlin12-creator/steam-fun
 summary: 课程业务流程的本地离线交付工作区

@@ -19,7 +19,7 @@ tags: ai,prompt,resource
 - 远端：zhaosenlin12-creator/xuanxuan-prompts
 
 ## 价值
-- 给徒弟们用 Codex 复刻站时起步
+- 给学习者用 Codex 复刻站时起步
 - 抖音「30 分钟 Vibe Coding 能做啥」栏目素材
 
 ## 下一步

@@ -15,7 +15,7 @@
 - `20_Projects`：GitHub 和本地项目卡
 - `30_Teaching`：课程、教案和学员作品
 - `40_Content`：抖音、直播、栏目和复盘
-- `50_AI`：工具卡、工作流和学习路线
+- `50_AI`：工具、工作流和学习路线
 - `60_Assets`：本地与在线资产索引
 - `70_Sources`：外部学习资料及来源说明
 - `80_Canvas`：能力与关系可视图
@@ -29,6 +29,7 @@
 - 查内容：[[40_Content/index]]
 - 查 AI：[[50_AI/index]]
 - 查外部资料：[[70_Sources/index]]
+- 查使用说明：[[00_Home/使用说明]]
 - 命令行：`rg -n "关键词" C:\my_know`
 
 核心笔记统一使用 properties：`type`、`status`、`domain`、`audience`、`repo`、`url`、`summary`、`next_action`、`updated_at`。
@@ -42,15 +43,14 @@
 
 ## VibeHub 离线学习库
 `70_Sources/vibe-hub` 已从 <https://vibe-hub.org/> 的 sitemap 抓取 484 个允许页面，中文和英文各 242 页。
-
 - 本地全文：`70_Sources/vibe-hub/pages/`
 - 表格索引：`70_Sources/vibe-hub/index.csv`
 - 学习路线：[[50_AI/AI编程学习路线]]
 - 原始页面仅保留本地，不推送到公开 GitHub
 - 抓取 Skill：`C:\Users\Administrator\.codex\skills\website-knowledge-crawler`
 
-## 四位徒弟入门
-协作和建库规则见 [[CONTRIBUTING]]。每位徒弟复制这套骨架后，必须重写自己的“三问”和能力地图，不照抄森林的个人结论。
+## 参考与复用
+结构和协作规则见 [[CONTRIBUTING]]。任何人都可以参考这套骨架，但应重写自己的“三问”和能力地图。
 
 ## GitHub 同步
 - 本地 Vault：`C:\my_know`

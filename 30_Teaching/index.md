@@ -2,7 +2,7 @@
 type: moc
 status: active
 domain: teaching
-audience: self,apprentice
+audience: self
 updated_at: 2026-07-27
 tags: teaching,moc
 ---
@@ -22,7 +22,7 @@ tags: teaching,moc
 - [[20_Projects/gaokao_design]]：地图与真实议题
 - [[20_Projects/codebn-system]]：业务系统与工程实践
 
-## 学员与徒弟
+## 学员作品
 - [[30_Teaching/_students-mirror]]：作品镜像、负责人和发布状态
 
 ## 原始资料位置

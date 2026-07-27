@@ -2,7 +2,7 @@
 type: project
 status: hold
 domain: assets,3d,education
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/NASA-3D-Resources
 url: https://github.com/zhaosenlin12-creator/NASA-3D-Resources
 summary: NASA 公开 3D 模型、纹理和图像资源集合

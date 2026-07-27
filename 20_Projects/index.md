@@ -2,14 +2,14 @@
 type: moc
 status: active
 domain: projects
-audience: self,apprentice
+audience: self
 updated_at: 2026-07-27
 tags: projects,moc
 ---
 
 # 项目总表
 
-> 项目卡记录“为什么做、做到哪、下一步和证据”，仓库列表本身不等于能力。公开仓库全量对账见 [[60_Assets/GitHub仓库总账]]。
+> 项目卡记录“为什么做、做到哪、下一步和证据”。公开仓库全量对账见 [[60_Assets/GitHub仓库总账]]。
 
 ## 核心产品与教学项目
 - [[20_Projects/senlin_website]]：个人品牌与教学入口
@@ -61,7 +61,7 @@ tags: projects,moc
 - `C:\kaifa\codebn-system-git`
 - `C:\kaifa\game-google`
 - `C:\kaifa_senlin\yichang_travel-main`
-- 学员与徒弟作品见 [[30_Teaching/_students-mirror]]
+- 学员作品见 [[30_Teaching/_students-mirror]]
 
 ## 项目卡最低标准
 - 有真实仓库或本地目录

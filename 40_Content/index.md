@@ -2,7 +2,7 @@
 type: moc
 status: active
 domain: content
-audience: self,apprentice
+audience: self
 updated_at: 2026-07-27
 tags: content,moc
 ---

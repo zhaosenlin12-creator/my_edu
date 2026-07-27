@@ -2,7 +2,7 @@
 type: project
 status: evaluate
 domain: web,design,ui
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/animal-island-ui
 url: https://github.com/zhaosenlin12-creator/animal-island-ui
 summary: 动物森友会风格 React 组件库参考仓

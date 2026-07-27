@@ -2,7 +2,7 @@
 type: project
 status: evaluate
 domain: computer-vision,ai
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/rf-detr
 url: https://github.com/zhaosenlin12-creator/rf-detr
 summary: 实时目标检测、分割与关键点模型参考仓

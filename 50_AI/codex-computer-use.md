@@ -2,7 +2,7 @@
 type: ai_tool
 status: evaluate
 domain: ai,automation,windows
-audience: self,apprentice
+audience: self
 repo:
 url:
 summary: 用于操作 Windows 桌面应用和验证真实界面的能力层

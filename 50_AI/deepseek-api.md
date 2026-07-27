@@ -2,7 +2,7 @@
 type: ai_tool
 status: active
 domain: ai,api,education
-audience: self,apprentice
+audience: self
 repo:
 url: https://platform.deepseek.com/
 summary: 已用于 Python 冒险岛等项目的模型 API，承担结构化出题与后端能力

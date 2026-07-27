@@ -6,7 +6,7 @@ audience: dev
 repo: zhaosenlin12-creator/andrej-karpathy-skills
 url: https://github.com/zhaosenlin12-creator/andrej-karpathy-skills
 summary: Karpathy CLAUDE.md 中文版（含 Cursor 章节）
-next_action: 给徒弟 + Codex 群共享
+next_action: 给需要参考的人与 Codex 群共享
 updated_at: 2026-07-27
 tags: ai,prompt,resource
 ---
@@ -20,5 +20,5 @@ tags: ai,prompt,resource
 - 来源：上游 multica-ai/andrej-karpathy-skills
 
 ## 价值
-- 给徒弟们共享
+- 给需要参考的人共享
 - 默认 Codex 会用

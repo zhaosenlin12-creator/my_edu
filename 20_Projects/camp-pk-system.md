@@ -2,7 +2,7 @@
 type: project
 status: active
 domain: teaching,game,system
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/camp-pk-system
 url: https://github.com/zhaosenlin12-creator/camp-pk-system
 summary: 编程创赛营积分 PK 与课堂互动系统

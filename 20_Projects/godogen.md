@@ -2,7 +2,7 @@
 type: project
 status: evaluate
 domain: ai,game
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/godogen
 url: https://github.com/zhaosenlin12-creator/godogen
 summary: 用 Claude Code / Codex 自动生成 Godot、Bevy、Babylon.js 游戏的框架

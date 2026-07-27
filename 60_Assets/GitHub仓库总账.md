@@ -2,7 +2,7 @@
 type: inventory
 status: active
 domain: github,projects
-audience: self,apprentice
+audience: self
 updated_at: 2026-07-27
 tags: github,inventory
 ---

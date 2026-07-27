@@ -2,7 +2,7 @@
 type: ai_tool
 status: active
 domain: ai,writing,analysis
-audience: self,apprentice
+audience: self
 repo:
 url: https://claude.ai/
 summary: 用于长文理解、结构化草稿和第二视角复核

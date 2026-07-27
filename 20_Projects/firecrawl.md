@@ -2,7 +2,7 @@
 type: project
 status: evaluate
 domain: ai,crawling,research
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/firecrawl
 url: https://github.com/zhaosenlin12-creator/firecrawl
 summary: 搜索、抓取和网页交互平台的本地研究副本

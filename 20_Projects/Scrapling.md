@@ -2,7 +2,7 @@
 type: project
 status: active
 domain: crawling,python,ai
-audience: self,apprentice
+audience: self
 repo: zhaosenlin12-creator/Scrapling
 url: https://github.com/zhaosenlin12-creator/Scrapling
 summary: 自适应网页抓取框架与本地工具仓

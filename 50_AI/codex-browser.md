@@ -2,7 +2,7 @@
 type: ai_tool
 status: evaluate
 domain: ai,research,browser
-audience: self,apprentice
+audience: self
 repo:
 url:
 summary: 用于网页研究、在线核验和浏览器流程辅助的能力层
@@ -33,7 +33,7 @@ tags: ai,browser,research,evaluate
 4. 能回到项目的结论写入对应卡片。
 5. 时效性强的信息标记复查日期。
 
-## 徒弟练习
+## 练习
 - [ ] 找 3 个优秀个人知识库仓库并比较目录设计
 - [ ] 核验一个 AI 工具的官方能力、价格和限制
 - [ ] 检查自己的个人站在手机与桌面的关键入口
