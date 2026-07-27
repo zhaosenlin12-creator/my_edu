@@ -34,8 +34,7 @@ node_modules/
 *.rar
 *.7z
 
-# Local website mirrors (source material, not republished)
-70_Sources/vibe-hub/pages/
+# Crawler smoke tests (kept local; full archives are committed)
 70_Sources/_vibe-hub-smoke-*/
 
 # Machine-local inventories (may contain private paths)
