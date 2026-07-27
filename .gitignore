@@ -1,4 +1,4 @@
-﻿# Obsidian
+# Obsidian
 .obsidian/workspace/
 .obsidian/cache/
 .obsidian/themes/
@@ -33,3 +33,16 @@ node_modules/
 *.zip
 *.rar
 *.7z
+
+# Local website mirrors (source material, not republished)
+70_Sources/vibe-hub/pages/
+70_Sources/_vibe-hub-smoke-*/
+
+# Machine-local inventories (may contain private paths)
+60_Assets/local-git-repositories.csv
+60_Assets/local-kaifa-directories.csv
+60_Assets/teaching-packages.csv
+
+# Python cache
+__pycache__/
+*.py[cod]

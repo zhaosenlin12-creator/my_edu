@@ -2,44 +2,32 @@
 type: moc
 status: active
 domain: content
-audience: self
+audience: self,apprentice
 updated_at: 2026-07-27
-tags:
+tags: content,moc
 ---
 
-# 内容总表 / 我做什么
+# 内容总表
 
-## 账号
-- 抖音：愈见森林（douyin.com/user/MS4wLjABAAAAxHHFo-1JZJ3GPL_HYbgUo6X7hN5jWrk5wJUYl42rgW0）
+## 主账号与数据
+- [[40_Content/curerforest-channel]]：愈见森林账号定位与数据入口
+- [[40_Content/benchmarks]]：对标账号与判断口径
 
-## 固定栏目（短期）
-- A：今天这个 AI 工具，谁先会谁先赢（冲点击 + 涨粉）
-- B：30 分钟 Vibe Coding 能做成什么（冲收藏）
-- C：如果你家有孩子，这条 AI 内容别划走（冲评论 + 人设）
+## 栏目与生产
+- [[40_Content/columns]]：短视频固定栏目
+- [[40_Content/live-sop-six-round]]：六轮直播 SOP 与复盘
 
-## 主数据
-- 当前粉丝：约 162（2026-07-26）
-- 作品：98
-- 总获赞：约 2543
-- 单条跑过：~4.7 万 / ~1.1 万
-- 单条新粉率上限：~0.6%（待提升到 0.8%）
+## 原始数据位置
+- `C:\kaifa_senlin\douyin\accounts\yujian-senlin\data\account_snapshot.csv`
+- `C:\kaifa_senlin\douyin\accounts\yujian-senlin\data\video_metrics.csv`
+- `C:\直播数据复盘笔记`
+- `C:\kaifa_senlin\douyin\daily_outputs`
 
-## 数据文件
-- C:\kaifa_senlin\douyin\accounts\yujian-senlin\data\account_snapshot.csv
-- C:\kaifa_senlin\douyin\accounts\yujian-senlin\data\video_metrics.csv
-- C:\kaifa_senlin\douyin\douyin-metrics-tracker.csv
+## 内容转化链
+项目 / 课堂现场 → 一条短视频 → 一场直播 → 一篇复盘 → 一张可复用知识卡。
 
-## 直播话术（本地）
-- C:\直播数据复盘笔记\六轮完整直播脚本话术.md
-- C:\直播数据复盘笔记\六轮完整直播脚本话术-数据驱动版（上半场）.md
-- C:\直播数据复盘笔记\六轮完整直播脚本话术-数据驱动版（下半场）.md
-- C:\直播数据复盘笔记\直播数据复盘投流笔记--有效的复盘大于10场无效的直播.md
-
-## 长文 / 文章
-- C:\kaifa_senlin\douyin\daily_outputs\*.md
-- 内容来源：Claude 看全网后给的「与你赛道匹配的两篇」草稿
-
-## 其它平台
-- 视频号：待建立（2026 Q4 目标）
-- 小红书：待建立
-- 公众号：待建立
+## 新内容最低记录
+- 目标受众和要解决的问题
+- 开头、核心演示和行动指令
+- 发布日期、播放、互动、涨粉和转化
+- 哪一部分可以进入课程或下一条内容

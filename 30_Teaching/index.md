@@ -2,43 +2,38 @@
 type: moc
 status: active
 domain: teaching
-audience: self
+audience: self,apprentice
 updated_at: 2026-07-27
-tags:
+tags: teaching,moc
 ---
 
-# 教学总表 / 我有什么
+# 教学总表
 
-> 所有教案、课堂案例、学员作品都在 30_Teaching/。
+## 当前课程与项目
+- [[30_Teaching/weDo-programming]]：低龄硬件与工程思维
+- [[30_Teaching/jrcode]]：积木到代码的过渡
+- [[30_Teaching/python-game-course]]：Python 游戏课程
+- [[30_Teaching/adventure-game-3d]]：Ursina 3D 冒险项目
+- [[30_Teaching/ai-classroom]]：AI 互动与项目式课堂
 
-## 当前体系（按学段）
-- 乐高搭建：低龄，物理 + 工程思维入门
-- WeDo 编程：小低到小中，图形化 + 硬件
-- JrCode：小高到初一，积木到 Python 过渡
-- Python / C++：初二到高一
-- AI 互动课堂：高一以上，项目式 + AI
+## 项目作为教学证据
+- [[20_Projects/python-adventure]]：浏览器 Python 与 AI 出题
+- [[20_Projects/world_website]]：Three.js 宇宙探索
+- [[20_Projects/gaokao_design]]：地图与真实议题
+- [[20_Projects/codebn-system]]：业务系统与工程实践
 
-## 我自己的项目（引用）
-- 20_Projects/codebn-system.md（机构管理）
-- 20_Projects/gaokao_design.md（高考志愿）
-- 20_Projects/python-adventure.md（Python 闯关）
+## 学员与徒弟
+- [[30_Teaching/_students-mirror]]：作品镜像、负责人和发布状态
 
-## 资料来源
-- C:\教案\：本地所有 .docx 教案 + 寒暑假创赛营
-- C:\直播数据复盘笔记\：招生 / 直播话术
-- C:\Users\Administrator\Desktop\ppt\：研学 / 直播 / 黑客松材料
+## 原始资料位置
+- `C:\教案`：教案、寒暑假创赛营
+- `C:\Users\Administrator\Desktop\ppt`：研学、直播和课程 PPT
+- `C:\直播数据复盘笔记`：招生与直播话术
 
-## 学员作品（站点）
-- 向敏老师个人站： C:\kaifa_teacher\xiangmin_website
-- 项民 / 杨涛个人站： C:\kaifa_teacher\xiangmin1_website, C:\kaifa_teacher\yangtao
-- 跟我学生共同迭代的版本： C:\kaifa_teacher\senlin_website
+## 新建方式
+- 课程卡：复制 `00_Home/_templates/teaching.md`
+- 项目卡：复制 `00_Home/_templates/project.md`
+- 内容卡：复制 `00_Home/_templates/content.md`
 
-## 抖音直播
-- 每周二 / 周五 19:00 - 21:00
-- 流程：开场破冰 → 项目示范 → 作品 / 答疑 → 二次逼单
-- 见 40_Content/ 直播脚本
-
-## 课件模板
-- 教案： 30_Teaching/_template_lesson.md
-- 项目包： 30_Teaching/_template_project.md
-- 招生话术： 40_Content/_templates/live_script.md
+## 一门课的完成定义
+必须同时具备：目标、课时结构、教师材料、学生源码、可展示成果、评价标准和课后复盘。

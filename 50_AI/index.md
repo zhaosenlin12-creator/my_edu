@@ -2,39 +2,34 @@
 type: moc
 status: active
 domain: ai
-audience: self
+audience: self,apprentice
 updated_at: 2026-07-27
-tags:
+tags: ai,moc
 ---
 
-# AI 总表 / 我用什么
+# AI 总表
 
-## 我日常在用
-- Codex（默认开发 / 知识库共建 / 复盘）
-- Claude.ai（结构化草稿）
-- Trea CN（轻量辅助）
-- DeepSeek API（Python 冒险岛 / CodeX-BN 后端）
+## 主力工具
+- [[50_AI/codex]]：开发、知识整理、审计和自动化
+- [[50_AI/claude-ai]]：长文结构与第二视角
+- [[50_AI/deepseek-api]]：进入真实项目的模型 API
 
-## 我观察的浏览器智能体 / 自动化
-- Codex browser
-- Codex computer-use
-- Codex computer use (Windows)
+## 评测中
+- [[50_AI/trea-cn]]：产品名称与独特价值待确认
+- [[50_AI/codex-browser]]：在线研究与网页核验
+- [[50_AI/codex-computer-use]]：Windows 桌面操作与验收
 
-## 我持有的 Skills / 提示词
-- 50_AI/_skills/
-  - andrej-karpathy-skills
-  - gsap-skills
-  - agent-sprite-forge
-  - patent-disclosure-skill
-- 50_AI/_prompts/
-  - MotionSites-Prompts
-  - xuanxuan-prompts
+## 学习与术语
+- [[50_AI/vibe-hub]]：Vibe Coding 大白话术语库
+- [[50_AI/AI编程学习路线]]：森林与四位徒弟的 12 周实作路径
+- [[70_Sources/index]]：外部资料及本地检索入口
 
-## 我的复评节奏
-- 每月 1 号：主用名单 + 信用卡 / 限额 / 限定
-- 每季度：淘汰一批
-- 新增：先写 50_AI/_candidate/<tool>.md，试用 7 天再正式收录
+## 项目化原则
+- 工具只有完成 3 个真实任务后才能从 evaluate 转 active
+- 每个 AI 功能都要有输入校验、失败降级、成本和隐私边界
+- 每月复评主力工具，每季度淘汰无独特价值的工具
+- 对话中的有效结论必须回写项目卡、课程卡或方法卡
 
-## 关键决策
-- 不为开放 API 容器付费，换更稳定的容器
-- 需要本地小模型（语音 / OCR）时，优先评测后入门
+## 相关 Skills
+- `website-knowledge-crawler`：公开站点到 Markdown + CSV 知识归档
+- 项目型 Skills 见 [[20_Projects/index]] 中的 Skills 仓库卡

@@ -1,99 +1,63 @@
-﻿# senlin-knowledge-base · 个人知识库
+# 森林个人知识库
 
-> 这是森林的个人 Obsidian 知识库。
-> 目的不是“记笔记”，而是让你和 AI 都能立刻知道：你有哪些能力、你有哪些项目、你下一步要往哪走。
+> 一个面向开发、教学、直播、自媒体与 AI 协作的 Obsidian Vault。目标不是收藏信息，而是持续回答：我是谁、我在哪、我要去哪。
 
-## 这个库解决什么
+## 从这里开始
+1. [[10_Profile/我是谁]]：身份、角色、价值主张
+2. [[10_Profile/我在哪]]：当前项目、教学、内容和卡点
+3. [[10_Profile/我要去哪]]：90 天、1 年、3 年目标
+4. [[10_Profile/能力地图]]：已验证能力、在补能力和边界
+5. [[00_Home/本周最重要的事]]：把方向落到本周动作
 
-- **我是谁** — 个人画像、能力图谱、定位、品牌、认证
-- **我在哪** — 当前项目、教学、内容、产品、资产的实时快照
-- **我要去哪** — 目标、里程碑、成长计划
-- **快速找** — 自己搜得到，AI 也读得到；用 properties / 标签 / MOC 索引实现
+## 目录
+- `00_Home`：本周焦点、模板和 MOC 总索引
+- `10_Profile`：个人画像、能力证据与目标
+- `20_Projects`：GitHub 和本地项目卡
+- `30_Teaching`：课程、教案和学员作品
+- `40_Content`：抖音、直播、栏目和复盘
+- `50_AI`：工具卡、工作流和学习路线
+- `60_Assets`：本地与在线资产索引
+- `70_Sources`：外部学习资料及来源说明
+- `80_Canvas`：能力与关系可视图
+- `90_Archive`：停止维护的历史内容
 
-## 目录（PARA + 编号地址）
+## 快速检索
+- Obsidian 全文搜索：`Ctrl+Shift+F`
+- 按主题浏览：`00_Home/MOCs/`
+- 查项目：[[20_Projects/index]]
+- 查课程：[[30_Teaching/index]]
+- 查内容：[[40_Content/index]]
+- 查 AI：[[50_AI/index]]
+- 查外部资料：[[70_Sources/index]]
+- 命令行：`rg -n "关键词" C:\my_know`
 
-- `00_Home` — 4 个首页 + 5 个模板 + 4 个 MOC 索引
-- `10_Profile` — 个人画像、能力图谱、定位
-- `20_Projects` — 每个项目一张卡（GitHub 仓库、直播项目、教学项目）
-- `30_Teaching` — 教案、课堂案例、学员作品
-- `40_Content` — 抖音 / 视频 / 文章 / 直播脚本 / 复盘
-- `50_AI` — 提示词、Skills、工具评测、工作流
-- `60_Assets` — 物料、模板、脚本、PPT、图片
-- `80_Canvas` — 大图：能力地图 / 流水线 / 关系图
-- `90_Archive` — 旧项目、历史快照
+核心笔记统一使用 properties：`type`、`status`、`domain`、`audience`、`repo`、`url`、`summary`、`next_action`、`updated_at`。
 
-每个核心笔记都带这套 properties（统一格式，方便 AI 读）：
+## 记录原则
+- 事实、推断、待确认分开写
+- 宣称“会”必须链接到项目、课程、内容或数据证据
+- 每张卡都要有下一步，不建没有用途的收藏夹
+- 外部原文与自己的理解分开存放
+- Token、密码、合同、学生隐私永不进入仓库
 
-```
-type:
-status:        # active / draft / done / hold
-domain:        # web / teaching / content / ai / game / system
-audience:      # student / parent / teacher / maker / self
-repo:
-url:
-summary:
-next_action:
-updated_at:    # YYYY-MM-DD
-```
+## VibeHub 离线学习库
+`70_Sources/vibe-hub` 已从 <https://vibe-hub.org/> 的 sitemap 抓取 484 个允许页面，中文和英文各 242 页。
 
-## 推荐插件（手动安装）
+- 本地全文：`70_Sources/vibe-hub/pages/`
+- 表格索引：`70_Sources/vibe-hub/index.csv`
+- 学习路线：[[50_AI/AI编程学习路线]]
+- 原始页面仅保留本地，不推送到公开 GitHub
+- 抓取 Skill：`C:\Users\Administrator\.codex\skills\website-knowledge-crawler`
 
-启动 Obsidian 后 → Settings → Community plugins → 浏览并打开：
+## 四位徒弟入门
+协作和建库规则见 [[CONTRIBUTING]]。每位徒弟复制这套骨架后，必须重写自己的“三问”和能力地图，不照抄森林的个人结论。
 
-- Dataview — 把每个 MD 当数据库查，用来画看板
-- Excalidraw — 在 80_Canvas 画关系图
-- Templater — 自动套用 `00_Home/_templates/`
-- Tag Wrangler — 整理标签
-- Git — 提交 / 拉取（默认自带）
+## GitHub 同步
+- 本地 Vault：`C:\my_know`
+- 远端：<https://github.com/zhaosenlin12-creator/my_edu>
+- 开始工作：`git pull --rebase`
+- 提交检查：`git status` 与 `git diff --check`
+- 同步：`git add -A && git commit -m "docs: update knowledge base" && git push`
 
-## 与 GitHub 同步（必读）
-
-本库在 `C:\my_know`，**默认不自动提交**。同步方式：
-
-1. 在 GitHub 创建一个空仓库（不要勾 README / .gitignore / License）。建议仓库名：
-   - `senlin-knowledge-base`（公开）或 `senlin-knowledge-private`（私有）
-2. 把仓库 URL 告诉我，我会一次性：
-   - `git init`
-   - 加 `.gitignore`（.obsidian/workspace、cache、plugins、trash 不入库）
-   - 首次 commit + push
-3. 之后每次本地更新 → 给我一句 “提交并同步” 即可
-
-`.gitignore` 已经预备好：
-
-```
-# Obsidian workspace
-.obsidian/workspace/
-.obsidian/cache/
-.obsidian/themes/
-.obsidian/plugins/
-.obsidian/log/
-
-# 系统 / 备份
-Thumbs.db
-desktop.ini
-~$*
-```
-
-## 怎么用（建议的工作流）
-
-1. **每次开始**：打开 “00_Home/我是谁.md” 校准方向
-2. **每周日晚上**：打开 “本周最重要的事.md”，复盘 + 写下周 3 件事
-3. **新增项目**：复制 `00_Home/_templates/project.md` 一份到 `20_Projects/`
-4. **新增一门课**：复制 `00_Home/_templates/teaching.md`
-5. **新写完一个抖音脚本**：复制 `00_Home/_templates/content.md`
-6. **新增一个 AI 工具**：复制 `00_Home/_templates/ai_tool.md`
-7. **每两周**：整理 `90_Archive`，把不再用的沉到历史
-
-## 与 Codex 的约定
-
-让 Codex 帮我做事时，把它需要的信息直接放在以下几页：
-
-- “我是谁” / “我在哪” / “我要去哪” / “本周最重要的事”
-- `00_Home/MOCs/` 下面相关的索引
-- 任务涉及的笔记本身（`20_Projects/*` / `30_Teaching/*` 等）
-
-不要把教案、合同、token、密钥放进本库。敏感文件单独保存。
-
-## License
-
-个人观点 / 笔记默认保留。共享 / 转用需走我同意。
+## 推荐 Obsidian 插件
+Dataview、Templater、Excalidraw、Tag Wrangler、Obsidian Git。插件不是知识库成立的前提，先把核心工作流跑通再安装。

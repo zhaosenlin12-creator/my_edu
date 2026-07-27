@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website Knowledge Crawler"
+  short_description: "Crawl public sites into searchable local knowledge"
+  default_prompt: "Crawl this public site while respecting robots.txt, then create a Markdown mirror and CSV search index."
