@@ -18,24 +18,25 @@ views:
     name: 全部项目
     order:
       - file.name
-      - note.status
-      - note.priority
-      - note.deadline
-      - note.tags
-  - type: board
-    name: 按状态
-    groupBy: note.status
-    order:
-      - file.name
-      - note.priority
-      - note.deadline
+      - status
+      - priority
+      - deadline
+      - tags
   - type: table
     name: 进行中
+    order:
+      - file.name
+      - priority
+      - deadline
     filter:
       and:
         - note.status == "active"
-        - note.status != "done"
+  - type: table
+    name: 高优先级
     order:
       - file.name
-      - note.priority
-      - note.deadline
+      - status
+      - deadline
+    filter:
+      and:
+        - note.priority == "high"

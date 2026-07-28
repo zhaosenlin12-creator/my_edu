@@ -15,9 +15,9 @@ views:
     name: 最近 30 天
     order:
       - file.name
-      - note.status
+      - status
   - type: table
     name: 全部
     order:
       - file.name
-      - note.status
+      - status

@@ -16,24 +16,24 @@ views:
   - type: table
     name: 时间线
     order:
-      - note.date
+      - date
       - file.name
-      - note.status
-      - note.tags
+      - status
+      - tags
   - type: table
     name: 待复审
+    order:
+      - date
+      - file.name
+      - tags
     filter:
       and:
         - note.status != "superseded"
-    order:
-      - note.date
-      - file.name
-      - note.tags
   - type: table
     name: 已废止
+    order:
+      - date
+      - file.name
     filter:
       and:
         - note.status == "superseded"
-    order:
-      - note.date
-      - file.name

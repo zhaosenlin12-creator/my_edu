@@ -16,13 +16,13 @@ views:
     name: 全部 Dossier
     order:
       - file.name
-      - note.status
-      - note.tags
+      - status
+      - tags
   - type: table
     name: 待补充
+    order:
+      - file.name
+      - tags
     filter:
       and:
         - note.status != "complete"
-    order:
-      - file.name
-      - note.tags
