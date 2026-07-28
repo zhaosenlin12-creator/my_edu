@@ -1,0 +1,28 @@
+filters:
+  and:
+    - file.folder == "60_Assets/dossiers"
+    - file.ext == "md"
+properties:
+  file.name:
+    displayName: Dossier
+  note.type:
+    displayName: 类型
+  note.status:
+    displayName: 状态
+  note.tags:
+    displayName: 标签
+views:
+  - type: table
+    name: 全部 Dossier
+    order:
+      - file.name
+      - note.status
+      - note.tags
+  - type: table
+    name: 待补充
+    filter:
+      and:
+        - note.status != "complete"
+    order:
+      - file.name
+      - note.tags

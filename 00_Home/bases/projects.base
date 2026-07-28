@@ -1,0 +1,41 @@
+filters:
+  and:
+    - file.folder == "20_Projects"
+    - file.ext == "md"
+properties:
+  file.name:
+    displayName: 项目
+  note.status:
+    displayName: 状态
+  note.priority:
+    displayName: 优先级
+  note.deadline:
+    displayName: 截止
+  note.tags:
+    displayName: 标签
+views:
+  - type: table
+    name: 全部项目
+    order:
+      - file.name
+      - note.status
+      - note.priority
+      - note.deadline
+      - note.tags
+  - type: board
+    name: 按状态
+    groupBy: note.status
+    order:
+      - file.name
+      - note.priority
+      - note.deadline
+  - type: table
+    name: 进行中
+    filter:
+      and:
+        - note.status == "active"
+        - note.status != "done"
+    order:
+      - file.name
+      - note.priority
+      - note.deadline

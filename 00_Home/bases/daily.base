@@ -1,0 +1,23 @@
+filters:
+  and:
+    - file.folder == "daily"
+    - file.ext == "md"
+    - file.name != "README.md"
+properties:
+  file.name:
+    displayName: 日期
+  note.status:
+    displayName: 状态
+  note.tags:
+    displayName: 标签
+views:
+  - type: table
+    name: 最近 30 天
+    order:
+      - file.name
+      - note.status
+  - type: table
+    name: 全部
+    order:
+      - file.name
+      - note.status

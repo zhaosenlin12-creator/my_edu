@@ -1,0 +1,39 @@
+filters:
+  and:
+    - file.folder == "70_Sources"
+    - file.ext == "md"
+properties:
+  file.name:
+    displayName: 资料名
+  note.source_url:
+    displayName: 来源
+  note.language:
+    displayName: 语言
+  note.category:
+    displayName: 分类
+  note.tags:
+    displayName: 标签
+views:
+  - type: table
+    name: 全部
+    order:
+      - file.name
+      - note.language
+      - note.category
+      - note.tags
+  - type: table
+    name: 中文
+    filter:
+      and:
+        - note.language == "zh"
+    order:
+      - file.name
+      - note.category
+  - type: table
+    name: 英文
+    filter:
+      and:
+        - note.language == "en"
+    order:
+      - file.name
+      - note.category
